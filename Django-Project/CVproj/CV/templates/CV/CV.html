@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Melika's CV</title>
+<style>
+    .title {
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        overflow: scroll;
+    }
+    .blue-section {
+        width: 100%;
+        height: 150vh; 
+        background-color: #98c2d4;
+        float: left;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 10px;
+    }
+
+    .text-border{
+        border: 2px solid white;
+        padding: 20px;
+        margin-bottom: 20px;
+        color: white;
+        width: 90%;
+    }
+    .footer {
+        background-color: #ffffff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin: 0;
+    }
+    .social-icons {
+        display: inline-block;
+    }
+    
+
+    .social-icons img {
+        width: 45px;
+        height: 40px;
+    }
+    
+
+</style>
+</head>
+<body>
+
+<div class="title">
+    <h1>- CV?</h1>
+</div>
+
+
+<div class="blue-section">
+    {%for profile in profiles %}
+        <div class="text-border">
+            <h2>Name: {{ profile.name }}</h2>
+        </div>
+        <div class="text-border">
+            <h2>Email: {{ profile.Email }} </h2>
+        </div>
+        <div class="text-border">
+            <h2>Phone: {{ profile.Phone }} </h2>
+        </div>
+        <div class="text-border">
+            <h2>Summary: {{ profile.summery }}</h2>
+        </div>
+        <div class="text-border">
+            <h2>Skills: {{ profile.skills }}</h2>
+        </div>
+        <div class="text-border">
+            <h2>Experience: {{ profile.experience }}</h2>
+        </div>
+        <div class="text-border">
+            <h2>Education: {{ profile.education }}</h2>
+        </div>
+        {% endfor %}
+    </div>
+<div class="footer">
+    <div class="social-icons">
+        {% load static %}
+        <a href="https://ir.linkedin.com/in/melika-asgharnezhad-067b1b28b"><img src="{% static 'images/linkedinlogo.jpg' %}" alt="Linkedin"></a>
+        <a href="mailto:melika.asgharnezhadd@gmail.com"><img src="{% static 'images/emaillogo.jpg'%}" alt="Gmail"></a>
+
+    </div>
+    </div>
+</body>
+</html>
