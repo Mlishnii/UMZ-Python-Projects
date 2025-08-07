@@ -1,2 +1,2 @@
 # UMZ-Python-Projects
-My Python exercises and projects at University of Mazandaran.
+Python exercises and projects from my studies at the University of Mazandaran. (2024)
